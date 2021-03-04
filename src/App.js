@@ -41,14 +41,14 @@ class App extends Component {
     ) {
       this.setState({ sessionTimerState: 1, message: "Session Timer Running" });
       if (this.timer === 0 && this.state.timeLeft > 0) {
-        this.timer = setInterval(this.countDown, 100);
+        this.timer = setInterval(this.countDown, 1000);
       }
     } else if (
       this.state.sessionTimerState === 0 &&
       this.state.breakTimerState === 2
     ) {
       if (this.timer === 0 && this.state.timeLeft > 0) {
-        this.timer = setInterval(this.countDown, 100);
+        this.timer = setInterval(this.countDown, 1000);
       }
 
       this.setState({ breakTimerState: 1, message: "Break Timer Running" });
